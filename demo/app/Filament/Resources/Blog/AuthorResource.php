@@ -34,7 +34,7 @@ class AuthorResource extends Resource
                 ->email()->unique(Author::class, 'email', ignoreRecord: true),
 
                 Forms\Components\MarkdownEditor::make('bio')  
-->columnSpan('full'),
+                ->columnSpan('full'),
 
                 Forms\Components\TextInput::make('github_handle')->label('GitHub handle')
                 ->maxLength(255),
@@ -65,12 +65,10 @@ class AuthorResource extends Resource
 // khoảng cách ở giữa các cột
                     Tables\Columns\Layout\Stack::make([
                         Tables\Columns\TextColumn::make('github_handle')
-                            // ->icon('icon-github')
                             ->label('GitHub')
                             ->alignLeft(),
 
                         Tables\Columns\TextColumn::make('twitter_handle')
-                            // ->icon('icon-twitter')
                             ->label('Twitter')
                             ->alignLeft(),
                     ])->space(2),

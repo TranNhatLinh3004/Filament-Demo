@@ -21,14 +21,15 @@ class PostSeeder extends Seeder
 
         // Create static posts with specific data
         Post::create([
-            'category_id' => 3,
-            'author_id' => 1,
-            'title' => 'Sample Post Title 1',
-            'slug' => Str::slug('Sample Post Title 1'),
-            'content' => 'This is the content for Sample Post Title 1.',
+            'category_id' => 6,
+            'author_id' => 2,
+            'title' => 'Updated Post Title',
+            'slug' => Str::slug('Updated Post Title'),
+            'content' => 'This is the updated content for the post.',
             'published_at' => $fake->dateTimeBetween('-1 month', 'now'),
-            'image' => 'https://via.placeholder.com/640x480.png',
+            'image' => 'https://images.pexels.com/photos/3224115/pexels-photo-3224115.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         ]);
+        
 
 //         $fake = Faker::create();
 //         // Giả sử bạn có các category với ID từ 1 đến 10

@@ -14,6 +14,7 @@ class Post extends Model
    
     // use HasTags;
     use HasFactory;
+  protected $table = 'posts';
   protected $guarded = [];
   public function author()
   {
